@@ -36,10 +36,12 @@ public class HelloWorld {
      * @return an instance of java.lang.String
      */
     @GET
-    @Produces(MediaType.TEXT_HTML)
+//    @Produces(MediaType.TEXT_HTML)
+    @Produces("text/html")
     public String getHtml() {
         //TODO return proper representation object
-        throw new UnsupportedOperationException();
+        return "<h1>Hello World!</h1>";
+//        throw new UnsupportedOperationException();
     }
 
     /**
