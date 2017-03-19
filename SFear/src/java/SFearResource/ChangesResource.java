@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package SFearResource;
-
+import SFearResource.holder;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.PathParam;
@@ -16,8 +16,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.json.JSONObject;
+import java.util.ArrayList;
 //import org.json.
-
 
 /**
  * REST Web Service
@@ -27,7 +27,11 @@ import org.json.JSONObject;
 @Path("/changes")
 public class ChangesResource {
     
-    variableholder var = new variableholder();
+    private IProcess service;
+//    ArrayList<variableholder> varters = holder.getVar();
+    private String bulb = holder.getBulb();
+//    private String x = varters.get(0);
+//    variableholder x = varters.get(0);
 //    data = 
     @Context
     private UriInfo context;
@@ -36,6 +40,7 @@ public class ChangesResource {
      * Creates a new instance of ChangesResource
      */
     public ChangesResource() {
+        
     }
 
     /**
@@ -43,10 +48,12 @@ public class ChangesResource {
      * @return an instance of java.lang.String
      */
     @GET
+    @Path("/get")
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson() {
         //TODO return proper representation object
-        return "{\"pay\":\""+var.getans()+"\"}";
+//        return "{\"pay\":\""+var.getans()+"\"}";
+        return "{\"pay\":\""+bulb+"\"}";
 //        throw new UnsupportedOperationException();
     }
     
@@ -56,16 +63,29 @@ public class ChangesResource {
      * @return an HTTP response with content of the created resource
      */
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    public variableholder postJson  (variableholder var){
-        return var;
+    @Path("/post")
+    @Consumes("application/json")   
+    @Produces("application/json")
+    public Response postJson(String obj) {
+        //TODO
+        
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+        
+//        service = 
+//        variableholder var = new variableholder();
+//        service = FacultyStudentServiceFactory.getService(Constants.ServiceCode.VALIDATE_ACCOUNT.toString());
+        try {
+//            var.setans(obj);
+//            varters.get(0).set(0, obj);
+            holder.setBulb(obj);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+        
+        return responseWS;
     }
-    
-//    @Produces("text/json")
-//    public Response postJson(String content) {
-//        //TODO
-//        return Response.created(context.getAbsolutePath()).build();
-//    }
 
     /**
      * Sub-resource locator method for /change

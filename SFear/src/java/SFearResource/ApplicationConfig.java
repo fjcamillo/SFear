@@ -14,7 +14,8 @@ import javax.ws.rs.core.Application;
  */
 @javax.ws.rs.ApplicationPath("webresources")
 public class ApplicationConfig extends Application {
-
+    
+    
     @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new java.util.HashSet<>();
@@ -32,6 +33,8 @@ public class ApplicationConfig extends Application {
         resources.add(SFearResource.ChangeResource.class);
         resources.add(SFearResource.ChangesResource.class);
         resources.add(SFearResource.HelloWorld.class);
+        resources.add(SFearResource.HousesResource.class);
+        resources.add(SFearResource.RestaurantsResource.class);
         resources.add(SFearResource.hiworldResource.class);
         resources.add(SFearResource.testResource.class);
     }

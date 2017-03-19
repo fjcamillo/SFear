@@ -9,15 +9,23 @@ package SFearResource;
  *
  * @author fjcamillo
  */
+
+
 public class variableholder {
     
-    private String ans = "ok";
+    private String ans;
+    
+    public variableholder(){}
+    
+    public variableholder(String nam){
+        this.ans = nam;
+    }
     
     public String getans(){
         return ans;
     }
     
-    public void setans(String data){
-        ans = data;
+    public void setans(String ans){
+        this.ans = ans;
     }
 }
