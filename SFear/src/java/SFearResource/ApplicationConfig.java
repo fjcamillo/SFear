@@ -29,7 +29,11 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(SFearResource.ChangeResource.class);
+        resources.add(SFearResource.ChangesResource.class);
         resources.add(SFearResource.HelloWorld.class);
+        resources.add(SFearResource.hiworldResource.class);
+        resources.add(SFearResource.testResource.class);
     }
     
 }

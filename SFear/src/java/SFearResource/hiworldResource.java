@@ -19,37 +19,36 @@ import javax.ws.rs.core.MediaType;
  *
  * @author fjcamillo
  */
-@Path("/helloworld")
-public class HelloWorld {
+@Path("/hiworld")
+public class hiworldResource {
 
     @Context
     private UriInfo context;
 
     /**
-     * Creates a new instance of HelloWorld
+     * Creates a new instance of hiworldResource
      */
-    public HelloWorld() {
+    public hiworldResource() {
     }
 
     /**
-     * Retrieves representation of an instance of SFearResource.HelloWorld
+     * Retrieves representation of an instance of SFearResource.hiworldResource
      * @return an instance of java.lang.String
      */
     @GET
-//    @Produces(MediaType.TEXT_HTML)
     @Produces("text/html")
-    public String getHtml() {
+    public String gethtml() {
+        return "<h1>Hi World!</h1>";
         //TODO return proper representation object
-        return "<h1>Hello World!</h1>";
 //        throw new UnsupportedOperationException();
     }
 
     /**
-     * PUT method for updating or creating an instance of HelloWorld
+     * PUT method for updating or creating an instance of hiworldResource
      * @param content representation for the resource
      */
     @PUT
-    @Consumes(MediaType.TEXT_HTML)
-    public void putHtml(String content) {
+    @Consumes(MediaType.APPLICATION_XML)
+    public void putXml(String content) {
     }
 }

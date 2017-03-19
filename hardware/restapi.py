@@ -18,7 +18,7 @@ def getData(url):
     status = requests.get(url)
 
     # if status ==
-
+    requests.
 def postData():
     pass
 
