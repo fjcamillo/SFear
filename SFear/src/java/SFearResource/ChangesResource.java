@@ -57,7 +57,7 @@ public class ChangesResource {
      */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public variableholder postJson(variableholder var){
+    public variableholder postJson  (variableholder var){
         return var;
     }
     
