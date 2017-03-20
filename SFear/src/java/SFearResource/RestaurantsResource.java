@@ -222,12 +222,357 @@ public class RestaurantsResource {
     @Path("/post/1")
     @Consumes("application/json")
     @Produces("application/json")
+    public Response postJson1(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit1(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/2")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson2(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit2(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/3")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson3(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit3(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/4")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson4(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit4(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/5")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson5(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit5(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/6")
+    @Consumes("application/json")
+    @Produces("application/json")
     public Response postJson(String content) {
         //TODO
         // return Response.created(context.getAbsolutePath()).build();
 
         Response responseWS = null;
         JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit6(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/7")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson7(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit7(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/8")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson8(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit8(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/9")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson9(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit9(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/10")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson10(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit10(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/11")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson11(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit11(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/12")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson12(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit12(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/13")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson13(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit13(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/14")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson14(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit14(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/15")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson15(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit15(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/16")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson16(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit16(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
+    }
+
+    @POST
+    @Path("/post/17")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response postJson17(String content) {
+        //TODO
+        // return Response.created(context.getAbsolutePath()).build();
+
+        Response responseWS = null;
+        JSONObject response = new JSONObject();
+
+        try{
+            cozynaholder.setsit17(content);
+            responseWS = Response.status(200).entity(response.toString()).build();
+        } catch (Exception e) {
+            responseWS = Response.status(200).entity(response.toString()).build();
+        }
+
+        return responseWS;
     }
 
     /**
