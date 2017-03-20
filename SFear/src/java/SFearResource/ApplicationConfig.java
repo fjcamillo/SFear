@@ -33,7 +33,9 @@ public class ApplicationConfig extends Application {
         resources.add(SFearResource.ChangeResource.class);
         resources.add(SFearResource.ChangesResource.class);
         resources.add(SFearResource.HelloWorld.class);
+        resources.add(SFearResource.HouseResource.class);
         resources.add(SFearResource.HousesResource.class);
+        resources.add(SFearResource.RestaurantResource.class);
         resources.add(SFearResource.RestaurantsResource.class);
         resources.add(SFearResource.hiworldResource.class);
         resources.add(SFearResource.testResource.class);

@@ -21,7 +21,7 @@ import javax.ws.rs.core.Response;
  *
  * @author fjcamillo
  */
-@Path("/restaurantcs")
+@Path("/restaurants")
 public class RestaurantsResource {
 
     @Context
