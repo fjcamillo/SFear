@@ -90,7 +90,7 @@ public class RestaurantsResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson4() {
         //TODO return proper representation object
-        return sit1;
+        return sit4;
         // throw new UnsupportedOperationException();
     }
 
@@ -126,7 +126,7 @@ public class RestaurantsResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson8() {
         //TODO return proper representation object
-        return sit8;
+        return "{\"Data\":\""+sit8+"\"}";
         // throw new UnsupportedOperationException();
     }
 
@@ -240,7 +240,7 @@ public class RestaurantsResource {
     }
 
     @POST
-    @Path("/post/2")
+    @Path("/2")
     @Consumes("application/json")
     @Produces("application/json")
     public Response postJson2(String content) {
@@ -327,7 +327,7 @@ public class RestaurantsResource {
     @Path("/post/6")
     @Consumes("application/json")
     @Produces("application/json")
-    public Response postJson(String content) {
+    public Response postJson6(String content) {
         //TODO
         // return Response.created(context.getAbsolutePath()).build();
 

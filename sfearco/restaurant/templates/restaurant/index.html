@@ -1,15 +1,23 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
   <title>Cozyna | Your IoT Restaurant Solution</title>
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-  <link rel='stylesheet' type="text/css" href='css/index.css'>
+{#  <link rel="stylesheet" type="text/css" href="css/reset.css">#}
+{#  <link rel="stylesheet" type="text/css" href="css/style.css">#}
+{#  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">#}
+{#  <link rel='stylesheet' type="text/css" href='css/index.css'>#}
+
+    <link rel="stylesheet" type="text/css" href={% static 'restaurant/css/reset.css' %}>
+  <link rel="stylesheet" type="text/css" href={% static 'restaurant/css/style.css' %}>
+  <link rel="stylesheet" type="text/css" href={% static 'restaurant/css/stylesheet.css' %}>
+  <link rel='stylesheet' type="text/css" href={% static 'restaurant/css/index.css' %}>
 
    <link rel="shortcut icon" href="img/favicon.ico">
 
-    <link rel='stylesheet' href='css/bootstrap.css'>
+{#    <link rel='stylesheet' href='css/bootstrap.css'>#}
+    <link rel='stylesheet' href={% static 'restaurant/css/bootstrap.css' %}>
     <style type="text/css">
   @media (min-width: 768px) {
   .dl-horizontal dt {
@@ -47,10 +55,11 @@
   <div style=" height: 100%">
     <div class="center"><span class="customfont">Your IoT Restaurant Solution</span></div>
     <div class="ibox">
-      <img src="img/logo.png" style="">
+{#      <img src="img/logo.png" style="">#}
+        <img src={% static 'restaurant/img/logo.png' %} style="">
     </div>
     <video autoplay loop id="video-background" muted>
-      <source src="videos/1.5.mp4" type="video/mp4">
+      <source src={% static 'restaurant/videos/1.5.mp4' %} type="video/mp4">
     </video>
    
   </div>
@@ -66,7 +75,7 @@
       <h2 class="graph_title">Waiter Management</h2>
       <h3 class="graph_subtitle">Manage your waiter management lorem dolor sit amet.</h3>
       <div class="graph_container ">
-        <img src="img/graph1.gif" style="width: 800px; height: 400px;"/>
+        <img src={% static 'restaurant/img/graph1.gif' %} style="width: 800px; height: 400px;"/>
         <span class="tooltiptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -82,7 +91,7 @@
       <h2 class="graph_title">Customer Satisfaction</h2>
       <h3 class="graph_subtitle">Manage your waiter management lorem dolor sit amet.</h3>
       <div class="graph_container">
-        <img src="img/graph2.gif" style="width: 800px; height: 400px;"/>
+        <img src={% static 'restaurant/img/graph2.gif' %} style="width: 800px; height: 400px;"/>
         <span class="tooltiptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -98,7 +107,7 @@
       <h2 class="graph_title">Customer Service</h2>
       <h3 class="graph_subtitle">Manage your waiter management lorem dolor sit amet.</h3>
       <div class="graph_container">
-        <img src="img/graph1.gif" style="width: 800px; height: 400px;"/>
+        <img src={% static 'restaurant/img/graph1.gif' %} style="width: 800px; height: 400px;"/>
         <span class="tooltiptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -114,7 +123,7 @@
       <h2 class="graph_title">Agent 1</h2>
       <h3 class="graph_subtitle">Manage your waiter management lorem dolor sit amet.</h3>
       <div class="graph_container">
-        <img src="img/graph1.gif" style="width: 800px; height: 400px;"/>
+        <img src={% static 'restaurant/img/graph1.gif' %} style="width: 800px; height: 400px;"/>
         <span class="tooltiptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -130,7 +139,7 @@
       <h2 class="graph_title">Agent 2</h2>
       <h3 class="graph_subtitle">Manage your waiter management lorem dolor sit amet.</h3>
       <div class="graph_container">
-        <img src="img/graph1.gif" style="width: 800px; height: 400px;"/>
+        <img src={% static 'restaurant/img/graph1.gif' %} style="width: 800px; height: 400px;"/>
         <span class="tooltiptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -146,7 +155,7 @@
       <h2 class="graph_title">Agent 3</h2>
       <h3 class="graph_subtitle">Manage your waiter management lorem dolor sit amet.</h3>
       <div class="graph_container">
-        <img src="img/graph1.gif" style="width: 800px; height: 400px;"/>
+        <img src={% static 'restaurant/img/graph1.gif' %} style="width: 800px; height: 400px;"/>
         <span class="tooltiptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -164,9 +173,16 @@
     </ul>
   </nav> <!-- .cd-vertical-nav -->
 
-<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
-<script type="text/javascript" src="js/velocity.min.js"></script>
-<script type="text/javascript" src="js/velocity.ui.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+{#<script type="text/javascript" src="js/jquery-2.1.4.js"></script>#}
+{#<script type="text/javascript" src="js/velocity.min.js"></script>#}
+{#<script type="text/javascript" src="js/velocity.ui.min.js"></script>#}
+{#<script type="text/javascript" src="js/main.js"></script>#}
+
+<script type="text/javascript" src={% static 'restaurant/js/jquery-2.1.4.js' %}></script>
+<script type="text/javascript" src={% static 'restaurant/js/velocity.min.js' %}></script>
+<script type="text/javascript" src={% static 'restaurant/js/velocity.ui.min.js' %}></script>
+<script type="text/javascript" src={% static 'restaurant/js/main.js' %}></script>
+
+
 </body>
 </html>

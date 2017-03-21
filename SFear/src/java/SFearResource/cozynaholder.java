@@ -12,28 +12,28 @@ import java.util.ArrayList;
 
 public class cozynaholder {
     
-    private static String[] typer = {
-        "vacant",
-        "taken"
-    };  
+//    private static String[] typer = {
+//        "vacant",
+//        "taken"
+//    };  
     
-    private static String sit1 = typer[0];
-    private static String sit2 = typer[0];
-    private static String sit3 = typer[0];
-    private static String sit4 = typer[0];
-    private static String sit5 = typer[0];
-    private static String sit6 = typer[0];
-    private static String sit7 = typer[0];
-    private static String sit8 = typer[0];
-    private static String sit9 = typer[0];
-    private static String sit10 = typer[0];
-    private static String sit11 = typer[0];
-    private static String sit12 = typer[0];
-    private static String sit13 = typer[0];
-    private static String sit14 = typer[0];
-    private static String sit15 = typer[0];
-    private static String sit16 = typer[0];
-    private static String sit17 = typer[0];
+    private static String sit1 = "off";
+    private static String sit2= "off";
+    private static String sit3= "off";
+    private static String sit4= "off";
+    private static String sit5= "taken";
+    private static String sit6= "off";
+    private static String sit7= "off";
+    private static String sit8= "off";
+    private static String sit9= "off";
+    private static String sit10= "off";
+    private static String sit11= "off";
+    private static String sit12= "off";
+    private static String sit13= "off";
+    private static String sit14= "off";
+    private static String sit15= "off";
+    private static String sit16= "off";
+    private static String sit17= "off";
     
     public cozynaholder(){}
     

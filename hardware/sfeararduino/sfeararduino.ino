@@ -1,39 +1,57 @@
 
-int rooms[] = {0,1,2,3};
+int rooms[] = {2,3,4,5};
 String signals[] = {"on", "off"};
-
+int start, finish = 0;
 String firstnum, secondnum;
-
+int led2 = 2;
+int led3 = 3;
+int led4 = 4;
+int led5 = 5;
 void setup() {
   // put your setup code here, to run once:
 Serial.begin(9600);
-pinMode(rooms[0], OUTPUT);
-pinMode(rooms[1], OUTPUT);
-pinMode(rooms[2], OUTPUT);
-pinMode(rooms[3], OUTPUT);
+
+pinMode(0, OUTPUT);
+pinMode(1, OUTPUT);
+pinMode(2, OUTPUT);
+pinMode(3, OUTPUT);
 }
 
 void loop() {
-//   firstnum = Serial.readString(); 
-//   firstnum = Serial.readStringUntil(" ");
-//   Serial.read();
-//   secondnum = Serial.readStringUntil("\n");
-//   Serial.println("Hi: "+firstnum +","+ secondnum);
-//   Serial.println(firstnum);
-  if(Serial.available()>0){
-    firstnum = Serial.read();
-    Serial.println(firstnum);     
-  }     
-  
-     
-  if(secondnum=="off"){
-    digitalWrite(rooms[firstnum.toInt()],LOW);
-    }
-  if(secondnum=="on"){
-    digitalWrite(rooms[firstnum.toInt()],HIGH);
-    }
-
-}
+digitalWrite(rooms[0], HIGH);
+digitalWrite(rooms[1], HIGH);
+digitalWrite(rooms[2], HIGH);
+digitalWrite(rooms[3], HIGH);
+//    act();
+}     
+//}
+int y = 0;
+void act(){
+//  Serial.println("Test");
+  if (Serial.available() > 0) {
+    firstnum = Serial.readString();  
+//    Serial.println(firstnum+":kasjdl");
+    String x = firstnum;
+//    secondnum = x.substring(1,2);
+//    if(secondnum=="0"){
+//      digitalWrite(rooms[x],LOW);
+//      }
+//    if(secondnum=="1"){
+//      digitalWrite(rooms[x],HIGH);
+//      }
+      if(x=="1"){
+        digitalWrite(rooms[0],HIGH);
+        y=0;
+        }
+      else if(x=="0"){
+        digitalWrite(rooms[0],LOW);
+        y=1;
+        }
+      delay(50);
+      
+  }
+      
+  }
 
 void debugger(){
   Serial.println("0 on");

@@ -14,6 +14,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/sfearco/home" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sfearco/restaurant" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -23,6 +24,7 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/sfearco/home/templates" />
+        <option value="$MODULE_DIR$/sfearco/restaurant/templates" />
       </list>
     </option>
   </component>
