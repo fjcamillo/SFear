@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SFEAR | Control Your Lights</title>
+	<meta name="author" content="Shaneh Leng" />
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 65px;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		font-family: 'Oswald';
+		text-transform: uppercase;
+		background-color: rgba(0,0,0,0.3);
+		display: inline;
+		padding: 0 100px 0 100px;
+	}
+
+	.intro p {
+		color: #fff;
+		font-family: 'Simplifica';
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 35px;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+		background-size: cover;
+		background-position: center center;
+	}
+
+	.slide {
+		background-size: cover;
+		background-position: center center;
+	}
+
+	/* Overwriting styles for the navigation dots (to place it where we want)
+	* --------------------------------------- */
+	.fp-slidesNav.bottom{
+		bottom: 25px;
+		color: #fff;
+	}
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+	#section2 h1 {
+		color: #333;
+	}
+
+	#section0{
+		background-image: url(img/bg1.jpeg);
+		padding: 0 0 0 0;
+	}
+
+	#section1 #slide1 {
+		background-image: url(img/bg2.jpg);
+		padding: 0 0 0 0;
+	}
+
+	#section1 #slide2 {
+		background-image: url(img/bg3.jpeg);
+		padding: 0 0 0 0;
+	}
+
+	#section1 #slide3 {
+		background-image: url(img/bg4.jpeg);
+		padding: 0 0 0 0;
+	}
+
+	#section1 #slide4 {
+		background-image: url(img/bg5.jpeg);
+		padding: 0 0 0 0;
+	}
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+	<script type="text/javascript" src="js/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
+				sectionsColor: ['#444', '#444', '#444','#333','#222'],
+				slidesNavigation: true,
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="fullpage">
+
+	<div class="section " id="section0">
+		<nav id="navigation" class="navigation">
+				<span class="logo">Sfear</span>
+				<ul class="nav">
+					<a href="#firstPage" class="page-scroll" ><li class="">Home</li></a>
+					<a href="#secondPage" class="page-scroll" ><li class="">Kitchen</li></a>
+					<a href="#3rdPage" class="page-scroll" ><li class="">Browse</li></a>
+					<a href="#4thPage" class="page-scroll" ><li class="">Multiview</li></a>
+					<a href="#5thPage" class="page-scroll" ><li class="">Hardware</li></a>
+				</ul>
+			</nav>
+	</div>
+
+	<div class="section" id="section1">
+	    <div class="slide" id="slide1" data-anchor="slide1">
+			<div class="intro">
+				<p>Control your</p>
+				<h1>Kitchen Lights</h1>
+			</div>
+		</div>
+
+	    <div class="slide" id="slide2" data-anchor="slide2">
+			<div class="intro">
+				<p>Control your</p>
+				<h1>Comfort Room Lights</h1>
+			</div>
+		</div>
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<div class="intro">
+				<p>Control your</p>
+				<h1>Bedroom Lights</h1>
+			</div>
+		</div>	
+		<div class="slide" id="slide4" data-anchor="slide4">
+			<div class="intro">
+				<p>Control your</p>
+				<h1>Living Room Lights</h1>
+			</div>
+		</div>
+		<div class="slide" id="slide5" data-anchor="slide5">
+			<div class="intro">
+				<p>Control your</p>
+				<h1>Television</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="section2">
+		<div class="slide" id="slide1" data-anchor="slide1">
+			<div class="content">
+				<div class="box">
+					<img src="img/bulb8.png" class="bulb" />
+					<span class="name">Kitchen Lights</span>
+					<div class="button">
+						<span class="label">OFF</span>
+						<input type="checkbox" id="switch" /><label for="switch"></label>
+						<span class="label2">ON</span>
+					</div>	
+				</div>
+				<div class="box2">
+					<div class="graphcontainer"></div>
+				</div>
+			</div>	
+		</div>
+
+	    <div class="slide" id="slide2" data-anchor="slide2">
+			<div class="content">
+				<div class="box">
+					<img src="img/bulb7.png" class="bulb" />
+					<span class="name">Television</span>
+					<div class="button">
+						<span class="label">OFF</span>
+						<input type="checkbox" id="switch2" /><label id="2" for="switch2"></label>
+						<span class="label2">ON</span>
+					</div>	
+				</div>
+				<div class="box2">
+					<div class="graphcontainer"></div>
+				</div>
+			</div>	
+		</div>
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<div class="content">
+				<div class="box">
+					<img src="img/bulb6.png" class="bulb" />
+					<span class="name">Living Room Lights</span>
+					<div class="button">
+						<span class="label">OFF</span>
+						<input type="checkbox" id="switch3" /><label for="switch3"></label>
+						<span class="label2">ON</span>
+					</div>	
+				</div>
+				<div class="box2">
+					<div class="graphcontainer"></div>
+
+				</div>
+			</div>	
+		</div>	
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<div class="content">
+				<div class="box">
+					<img src="img/bulb4.png" class="bulb" />
+					<span class="name">Bedroom Lights</span>
+					<div class="button">
+						<span class="label">OFF</span>
+						<input type="checkbox" id="switch4" /><label for="switch4"></label>
+						<span class="label2">ON</span>
+					</div>	
+				</div>
+				<div class="box2">
+					<div class="graphcontainer"></div>
+				</div>
+			</div>	
+		</div>
+		<div class="slide" id="slide3" data-anchor="slide3">
+			<div class="content">
+				<div class="box">
+					<img src="img/bulb2.png" class="bulb" />
+					<span class="name">Comfort Room Lights</span>
+					<div class="button">
+						<span class="label">OFF</span>
+						<input type="checkbox" id="switch5" /><label for="switch5"></label>
+						<span class="label2">ON</span>
+					</div>	
+				</div>
+				<div class="box2">
+					<div class="graphcontainer"></div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<div class="section" id="section3">
+		<div class="content2">
+			<div class="mview">
+				<div class="imgg"><img src="img/bulb8.png" class="img2" /></div>
+				<div class="text">
+					<span class="name">Kitchen Lights</span>
+					<div class="button">
+						<span class="label">OFF</span>
+						<input type="checkbox" id="switch6" /><label for="switch6"></label>
+						<span class="label2">ON</span>
+					</div>	
+				</div>
+			</div>
+			<div class="mview">
+				<div class="imgg"><img src="img/bulb8.png" class="img2" /></div>
+				<div class="text">
+					<span class="name">Bedroom Lights</span>
+					<div class="button">
+						<span class="label">OFF</span>
+						<input type="checkbox" id="switch7" /><label for="switch7"></label>
+						<span class="label2">ON</span>
+					</div>	
+				</div>
+			</div>
+			<div class="mview">
+				<div class="imgg"><img src="img/bulb8.png" class="img2" /></div>
+				<div class="text">
+					<span class="name">Comfort Room <br>Lights</span>
+					<div class="button">
+						<span class="label">OFF</span>
+						<input type="checkbox" id="switch8" /><label for="switch8"></label>
+						<span class="label2">ON</span>
+					</div>	
+				</div>
+			</div>
+			<div class="mview">
+				<div class="imgg"><img src="img/bulb8.png" class="img2" /></div>
+				<div class="text">
+					<span class="name">Living Room Lights</span>
+					<div class="button">
+						<span class="label">OFF</span>
+						<input type="checkbox" id="switch9" /><label for="switch9"></label>
+						<span class="label2">ON</span>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="section4">
+		<div class="intro">
+			<h1>The Hardware</h1>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

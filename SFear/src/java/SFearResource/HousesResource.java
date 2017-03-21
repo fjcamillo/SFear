@@ -17,6 +17,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import org.json.JSONObject;
+import java.io.FileInputStream;
+import java.io.File;
+import java.io.InputStream;
 
 /**
  * REST Web Service
@@ -31,7 +34,7 @@ public class HousesResource {
     private String bedroomBulb = houselights.getBedRoomBulb();
     private String crBulb = houselights.getCRBulb();
     
-    
+    private static String directory = "/home/fjcamillo/Desktop/SFear/Initial Front End/sfear v2.0/index.html";
     @Context
     private UriInfo context;
 
@@ -53,6 +56,27 @@ public class HousesResource {
      * Retrieves representation of an instance of SFearResource.HousesResource
      * @return an instance of java.lang.String
      */
+    
+    @GET
+    @Path("/main")
+    @Produces({MediaType.TEXT_HTML})
+    public InputStream viewMain() {
+        //TODO return proper representation object
+//        return "hi";
+        
+        
+//        FileInputSream g = new FileInputStream(f);
+        try{
+            File f = new File(directory);
+            f.canExecute();
+//            return new FileInputStream(f);
+        } catch (Exception e) {
+            
+        }
+        return new FileInputStream(f);
+//        throw new UnsupportedOperationException();
+    }
+    
     @GET
     @Path("/get/kitchen")
     @Produces(MediaType.APPLICATION_JSON)

@@ -6,7 +6,7 @@ import time
 
 start = time.time()
 
-ports = ['COM1', 'ttyACM0']
+ports = ['COM1', '/dev/ttyACM0']
 baudrate = [9600]
 content = {"Content-type": "application/json"}
 arduino = serial.Serial(ports[1], baudrate[0], timeout=.1)
@@ -37,7 +37,7 @@ def getData():
 
 def main(data):
     datum = splitter(data)
-    status = requests.post(urlpost[datum[0]], headers=content, data=datum[1])
+    status = requests.post(urlpost[int(datum[0])], headers=content, data=datum[1])
 
 
 
@@ -45,8 +45,9 @@ def main(data):
 while 1:
     data = arduino.readline()
     if data:
+        print(data)
         main(data)
-    if start % 120 == 0:
+    if (time.time()-start)%120 == 0:
         sk, sl, sb, scr = getData()
         arduino.write(str(sk))
         arduino.write(str(sl))

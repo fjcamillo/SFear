@@ -26,23 +26,23 @@ import org.json.JSONObject;
 @Path("/restaurants")
 public class RestaurantsResource {
 
-    private static sit1 = cozynaholder.getsit1();
-    private static sit2 = cozynaholder.getsit2();
-    private static sit3 = cozynaholder.getsit3();
-    private static sit4 = cozynaholder.getsit4();
-    private static sit5 = cozynaholder.getsit5();
-    private static sit6 = cozynaholder.getsit6();
-    private static sit7 = cozynaholder.getsit7();
-    private static sit8 = cozynaholder.getsit8();
-    private static sit9 = cozynaholder.getsit9();
-    private static sit10 = cozynaholder.getsit10();
-    private static sit11 = cozynaholder.getsit11();
-    private static sit12 = cozynaholder.getsit12();
-    private static sit13 = cozynaholder.getsit13();
-    private static sit14 = cozynaholder.getsit14();
-    private static sit15 = cozynaholder.getsit15();
-    private static sit16 = cozynaholder.getsit16();
-    private static sit17 = cozynaholder.getsit17();
+    private static String sit1 = cozynaholder.getsit1();
+    private static String sit2 = cozynaholder.getsit2();
+    private static String sit3 = cozynaholder.getsit3();
+    private static String sit4 = cozynaholder.getsit4();
+    private static String sit5 = cozynaholder.getsit5();
+    private static String sit6 = cozynaholder.getsit6();
+    private static String sit7 = cozynaholder.getsit7();
+    private static String sit8 = cozynaholder.getsit8();
+    private static String sit9 = cozynaholder.getsit9();
+    private static String sit10 = cozynaholder.getsit10();
+    private static String sit11 = cozynaholder.getsit11();
+    private static String sit12 = cozynaholder.getsit12();
+    private static String sit13 = cozynaholder.getsit13();
+    private static String sit14 = cozynaholder.getsit14();
+    private static String sit15 = cozynaholder.getsit15();
+    private static String sit16 = cozynaholder.getsit16();
+    private static String sit17 = cozynaholder.getsit17();
     
 
     @Context
