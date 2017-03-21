@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -6,9 +8,13 @@
 	<title>SFEAR | Control Your Lights</title>
 	<meta name="author" content="Shaneh Leng" />
 
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/examples.css" />
-	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+	<!--<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />-->
+	<!--<link rel="stylesheet" type="text/css" href="css/examples.css" />-->
+	<!--<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />-->
+
+	<link rel="stylesheet" type="text/css" href={% static "home/css/jquery.fullPage.css" %}/>
+	<link rel="stylesheet" type="text/css" href={% static "home/css/examples.css" %} />
+	<link rel="stylesheet" type="text/css" href={% static "home/css/stylesheet.css" %} />
 
 	<style>
 
@@ -65,27 +71,33 @@
 	}
 
 	#section0{
-		background-image: url(img/bg1.jpeg);
+{#		background-image: url(img/bg1.jpeg);#}
+        background-image: url({% static "home/img/bg1.jpeg" %});
 		padding: 0 0 0 0;
 	}
 
 	#section1 #slide1 {
-		background-image: url(img/bg2.jpg);
+		background-image: url({% static "home/img/bg4.jpeg" %});
 		padding: 0 0 0 0;
 	}
 
 	#section1 #slide2 {
-		background-image: url(img/bg3.jpeg);
+		background-image: url({% static "home/img/bg5.jpeg" %});
 		padding: 0 0 0 0;
 	}
 
 	#section1 #slide3 {
-		background-image: url(img/bg4.jpeg);
+		background-image: url({% static "home/img/bg2.jpg" %});
 		padding: 0 0 0 0;
 	}
 
 	#section1 #slide4 {
-		background-image: url(img/bg5.jpeg);
+		background-image: url({% static "home/img/bg1.jpeg" %});
+		padding: 0 0 0 0;
+	}
+
+     #section1 #slide5 {
+		background-image: url({% static "home/img/bg3.jpeg" %});
 		padding: 0 0 0 0;
 	}
 
@@ -100,12 +112,19 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+{#	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>#}
+{##}
+{#	<script type="text/javascript" src="js/jquery.fullPage.js"></script>#}
+{#	<script type="text/javascript" src="js/examples.js"></script>#}
+{#	<script type="text/javascript" src="js/SmoothScroll.js"></script>#}
+{#	<script type="text/javascript" src="js/scroll.js"></script>#}
 
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="js/examples.js"></script>
-	<script type="text/javascript" src="js/SmoothScroll.js"></script>
-	<script type="text/javascript" src="js/scroll.js"></script>
+    <script type="text/javascript" src={% static "home/js/jquery.slimscroll.js" %}></script>
+
+	<script type="text/javascript" src={% static "home/js/SmoothScroll.js" %}></script>
+	<script type="text/javascript" src={% static "home/js/jquery.fullPage.js" %}></script>
+	<script type="text/javascript" src={% static "home/js/examples.js" %}></script>
+	<script type="text/javascript" src={% static "home/js/scroll.js" %}></script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -173,7 +192,7 @@
 		<div class="slide" id="slide1" data-anchor="slide1">
 			<div class="content">
 				<div class="box">
-					<img src="img/bulb8.png" class="bulb" />
+					<img src={% static "home/img/bulb8.png" %} class="bulb" />
 					<span class="name">Kitchen Lights</span>
 					<div class="button">
 						<span class="label">OFF</span>
@@ -190,7 +209,7 @@
 	    <div class="slide" id="slide2" data-anchor="slide2">
 			<div class="content">
 				<div class="box">
-					<img src="img/bulb7.png" class="bulb" />
+					<img src={% static "home/img/bulb7.png" %} class="bulb" />
 					<span class="name">Television</span>
 					<div class="button">
 						<span class="label">OFF</span>
@@ -206,7 +225,7 @@
 		<div class="slide" id="slide3" data-anchor="slide3">
 			<div class="content">
 				<div class="box">
-					<img src="img/bulb6.png" class="bulb" />
+					<img src={% static "home/img/bulb6.png" %} class="bulb" />
 					<span class="name">Living Room Lights</span>
 					<div class="button">
 						<span class="label">OFF</span>
@@ -223,7 +242,7 @@
 		<div class="slide" id="slide3" data-anchor="slide3">
 			<div class="content">
 				<div class="box">
-					<img src="img/bulb4.png" class="bulb" />
+					<img src={% static "home/img/bulb4.png" %} class="bulb" />
 					<span class="name">Bedroom Lights</span>
 					<div class="button">
 						<span class="label">OFF</span>
@@ -239,7 +258,7 @@
 		<div class="slide" id="slide3" data-anchor="slide3">
 			<div class="content">
 				<div class="box">
-					<img src="img/bulb2.png" class="bulb" />
+					<img src={% static "home/img/bulb2.png" %} class="bulb" />
 					<span class="name">Comfort Room Lights</span>
 					<div class="button">
 						<span class="label">OFF</span>
@@ -257,7 +276,7 @@
 	<div class="section" id="section3">
 		<div class="content2">
 			<div class="mview">
-				<div class="imgg"><img src="img/bulb8.png" class="img2" /></div>
+				<div class="imgg"><img src={% static "home/img/bulb8.png" %} class="img2" /></div>
 				<div class="text">
 					<span class="name">Kitchen Lights</span>
 					<div class="button">
@@ -268,7 +287,7 @@
 				</div>
 			</div>
 			<div class="mview">
-				<div class="imgg"><img src="img/bulb8.png" class="img2" /></div>
+				<div class="imgg"><img src={% static "home/img/bulb8.png" %} class="img2" /></div>
 				<div class="text">
 					<span class="name">Bedroom Lights</span>
 					<div class="button">
@@ -279,7 +298,7 @@
 				</div>
 			</div>
 			<div class="mview">
-				<div class="imgg"><img src="img/bulb8.png" class="img2" /></div>
+				<div class="imgg"><img src={% static "home/img/bulb8.png" %} class="img2" /></div>
 				<div class="text">
 					<span class="name">Comfort Room <br>Lights</span>
 					<div class="button">
@@ -290,7 +309,7 @@
 				</div>
 			</div>
 			<div class="mview">
-				<div class="imgg"><img src="img/bulb8.png" class="img2" /></div>
+				<div class="imgg"><img src={% static "home/img/bulb8.png" %} class="img2" /></div>
 				<div class="text">
 					<span class="name">Living Room Lights</span>
 					<div class="button">

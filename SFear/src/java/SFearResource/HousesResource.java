@@ -57,25 +57,25 @@ public class HousesResource {
      * @return an instance of java.lang.String
      */
     
-    @GET
-    @Path("/main")
-    @Produces({MediaType.TEXT_HTML})
-    public InputStream viewMain() {
-        //TODO return proper representation object
-//        return "hi";
-        
-        
-//        FileInputSream g = new FileInputStream(f);
-        try{
-            File f = new File(directory);
-            f.canExecute();
-//            return new FileInputStream(f);
-        } catch (Exception e) {
-            
-        }
-        return new FileInputStream(f);
-//        throw new UnsupportedOperationException();
-    }
+//    @GET
+//    @Path("/main")
+//    @Produces({MediaType.TEXT_HTML})
+//    public InputStream viewMain() {
+//        //TODO return proper representation object
+////        return "hi";
+//        
+//        
+////        FileInputSream g = new FileInputStream(f);
+//        try{
+//            File f = new File(directory);
+//            
+////            return new FileInputStream(f);
+//        } catch (Exception e) {
+//            
+//        }
+////        return new FileInputStream(f);
+////        throw new UnsupportedOperationException();
+//    }
     
     @GET
     @Path("/get/kitchen")
@@ -83,7 +83,8 @@ public class HousesResource {
     public String getJsonKitchen() {
         //TODO return proper representation object
 //        return "hi";
-        return kitchenBulb;
+        String half = "{\"data\":\"0 "+kitchenBulb+"\"}";
+        return half;
 //        throw new UnsupportedOperationException();
     }
     
@@ -92,7 +93,8 @@ public class HousesResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String getJsonLiving() {
         //TODO return proper representation object
-        return livingBulb;
+        String half = "{\"data\":\"1 "+livingBulb+"\"}";
+        return half;
 //        throw new UnsupportedOperationException();
     }
     
@@ -101,7 +103,8 @@ public class HousesResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String getJsonBedRoom() {
         //TODO return proper representation object
-        return bedroomBulb;
+        String half = "{\"data\":\"2 "+bedroomBulb+"\"}";
+        return half;
 //        throw new UnsupportedOperationException();
     }
     
@@ -110,7 +113,8 @@ public class HousesResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String getJsonCR() {
         //TODO return proper representation object
-        return crBulb;
+        String half = "{\"data\":\"3 "+crBulb+"\"}";
+        return half;
 //        throw new UnsupportedOperationException();
     }
 
@@ -158,7 +162,7 @@ public class HousesResource {
     }
     
     @POST
-    @Path("/post/bedrooom")
+    @Path("/post/bedroom")
     @Consumes("application/json")
     @Produces("application/json")
     public Response postJsonBedRoom(String content) {

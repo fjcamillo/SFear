@@ -32,7 +32,7 @@ def getData():
     statusBedRoom = requests.get(urlget[2])
     statusCR = requests.get(urlget[3])
     # datum = []
-    return statusKitchen, statusLiving, statusBedRoom, statusCR
+    return statusKitchen.json()["data"], statusLiving.json()["data"], statusBedRoom.json()["data"], statusCR.json()["data"]
 
 
 def main(data):
@@ -40,16 +40,39 @@ def main(data):
     status = requests.post(urlpost[int(datum[0])], headers=content, data=datum[1])
 
 
-
+datum = "off"
 
 while 1:
-    data = arduino.readline()
-    if data:
-        print(data)
-        main(data)
-    if (time.time()-start)%120 == 0:
-        sk, sl, sb, scr = getData()
-        arduino.write(str(sk))
-        arduino.write(str(sl))
-        arduino.write(str(sb))
-        arduino.write(str(scr))
+    print(arduino.readline()[:-2])
+    # if data:
+    #     print(data)
+    #     main(data)
+    sk, sl, sb, scr = getData()
+
+    arduino.write(str(sk))
+    print(sk)
+    time.sleep(1)
+    arduino.write(str(sl))
+    print(sl)
+    time.sleep(1)
+    arduino.write(str(sb))
+    print(sb)
+    time.sleep(1)
+    arduino.write(str(scr))
+    print(scr)
+    time.sleep(1)
+
+    # datum = [sk, sl, sb, scr]
+
+    for i in urlpost:
+        status = requests.post(i, headers=content, data=datum)
+        time.sleep(.25)
+        print(status)
+    if datum == "on":
+        datum = "off"
+    else:
+        datum = "on"
+
+    # if (time.time()-start)%60 == 0:
+
+    time.sleep(1)
